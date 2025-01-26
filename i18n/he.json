@@ -1,0 +1,147 @@
+{
+  "404": "הדף לא נמצא",
+  "areYouSure": "האם אתה בטוח?",
+  "backHome": "חזרה לדף הראשי",
+  "cancel": "ביטול",
+  "clear": "נקה",
+  "close": "סגור",
+  "delete": "מחק",
+  "deleteConfirm": "פעולה זו אינה הפיכה. פעולה זו תמחק לצמיתות הנתונים מהשרתים שלנו.",
+  "disabled": "מושבת",
+  "edit": "ערוך",
+  "enabled": "מופעל",
+  "error": "שגיאה",
+  "errorCode": "קוד שגיאה",
+  "loading": "טוען",
+  "loading...": "טוען...",
+  "no": "לא",
+  "ok": "אישור",
+  "pageNotFound": "הדף לא נמצא",
+  "pickADate": "בחר תאריך",
+  "refresh": "רענן",
+  "save": "שמור",
+  "submit": "אישור",
+  "success": "הצליח",
+  "themeOptions": {
+    "dark": "כהה",
+    "light": "בהיר",
+    "system": "מערכת"
+  },
+  "unknown": "לא ידוע",
+  "update": "עדכן",
+  "welcome": "ברוכים הבאים",
+  "yes": "כן",
+  "zodI18n": {
+    "errors": {
+      "custom": "קלט לא חוקי",
+      "invalid_arguments": "ארגומנטים לא חוקיים לפונקציה",
+      "invalid_date": "תאריך לא חוקי",
+      "invalid_enum_value": "ערך אנום לא חוקי. נדרש {options} לביקורת, התקבל '{received}'",
+      "invalid_intersection_types": "לא ניתן למזג את תוצאות החיתוך",
+      "invalid_literal": "ערך ליטרלי לא חוקי, נדרש {expected}",
+      "invalid_return_type": "סוג חזרה של פונקציה לא חוקי",
+      "invalid_string": {
+        "cuid": "{validation} לא חוקי",
+        "datetime": "{validation} לא חוקי",
+        "email": "{validation} לא חוקי",
+        "endsWith": "קלט לא חוקי: חייב להסתיים ב-\"{endsWith}\"",
+        "regex": "לא חוקי",
+        "startsWith": "קלט לא חוקי: חייב להתחיל ב-\"{startsWith}\"",
+        "url": "{validation} לא חוקי",
+        "uuid": "{validation} לא חוקי"
+      },
+      "invalid_type": "נדרש {expected}, התקבל {received}",
+      "invalid_type_received_undefined": "נדרש",
+      "invalid_union": "קלט לא חוקי",
+      "invalid_union_discriminator": "ערך מפלה לא חוקי. נדרש {options} לביקורת",
+      "not_finite": "מספר חייב להיות סופי",
+      "not_multiple_of": "מספר חייב להיות כפולה של {multipleOf}",
+      "required": "נדרש",
+      "too_big": {
+        "array": {
+          "exact": "מערך חייב להכיל בדיוק {maximum} אלמנטים",
+          "inclusive": "מערך חייב להכיל לכל היותר {maximum} אלמנטים",
+          "not_inclusive": "מערך חייב להכיל פחות מ-{maximum} אלמנטים"
+        },
+        "date": {
+          "exact": "תאריך חייב להיות בדיוק {maximum}",
+          "inclusive": "תאריך חייב להיות קטן או שווה ל-{maximum}",
+          "not_inclusive": "תאריך חייב להיות קטן מ-{maximum}"
+        },
+        "number": {
+          "exact": "מספר חייב להיות בדיוק {maximum}",
+          "inclusive": "מספר חייב להיות קטן או שווה ל-{maximum}",
+          "not_inclusive": "מספר חייב להיות קטן מ-{maximum}"
+        },
+        "set": {
+          "exact": "קלט לא חוקי",
+          "inclusive": "קלט לא חוקי",
+          "not_inclusive": "קלט לא חוקי"
+        },
+        "string": {
+          "exact": "מחרוזת חייבת להכיל בדיוק {maximum} תווים",
+          "inclusive": "מחרוזת חייבת להכיל לכל היותר {maximum} תווים",
+          "not_inclusive": "מחרוזת חייבת להכיל פחות מ-{maximum} תווים"
+        }
+      },
+      "too_small": {
+        "array": {
+          "exact": "מערך חייב להכיל בדיוק {minimum} אלמנטים",
+          "inclusive": "מערך חייב להכיל לפחות {minimum} אלמנטים",
+          "not_inclusive": "מערך חייב להכיל יותר מ-{minimum} אלמנטים"
+        },
+        "date": {
+          "exact": "תאריך חייב להיות בדיוק {minimum}",
+          "inclusive": "תאריך חייב להיות גדול או שווה ל-{minimum}",
+          "not_inclusive": "תאריך חייב להיות גדול מ-{minimum}"
+        },
+        "number": {
+          "exact": "מספר חייב להיות בדיוק {minimum}",
+          "inclusive": "מספר חייב להיות גדול או שווה ל-{minimum}",
+          "not_inclusive": "מספר חייב להיות גדול מ-{minimum}"
+        },
+        "set": {
+          "exact": "קלט לא חוקי",
+          "inclusive": "קלט לא חוקי",
+          "not_inclusive": "קלט לא חוקי"
+        },
+        "string": {
+          "exact": "מחרוזת חייבת להכיל בדיוק {minimum} תווים",
+          "inclusive": "מחרוזת חייבת להכיל לפחות {minimum} תווים",
+          "not_inclusive": "מחרוזת חייבת להכיל יותר מ-{minimum} תווים"
+        }
+      },
+      "unrecognized_keys": "מפתחות לא מוכרים באובייקט: {keys} לביקורת"
+    },
+    "types": {
+      "array": "מערך",
+      "bigint": "ביגינט",
+      "boolean": "בוליאני",
+      "date": "תאריך",
+      "float": "מספר עשרוני",
+      "function": "פונקציה",
+      "integer": "מספר שלם",
+      "map": "מפה",
+      "nan": "לא מספר",
+      "never": "לעולם לא",
+      "null": "ערך ריק",
+      "number": "מספר",
+      "object": "אובייקט",
+      "promise": "הבטחה",
+      "set": "קבוצה",
+      "string": "מחרוזת",
+      "symbol": "סמל",
+      "undefined": "לא מוגדר",
+      "unknown": "לא ידוע",
+      "void": "ריק"
+    },
+    "validations": {
+      "cuid": "cuid",
+      "datetime": "תאריך ושעה",
+      "email": "דואר אלקטרוני",
+      "regex": "ביטוי רגולרי",
+      "url": "כתובת URL",
+      "uuid": "uuid"
+    }
+  }
+}

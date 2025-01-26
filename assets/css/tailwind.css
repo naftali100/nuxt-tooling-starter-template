@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply min-h-screen dark:bg-slate-950 dark:text-white;
+}
+
+/* fix clerk input background color dor dark mode */
+.cl-otpCodeFieldInput.cl-input,
+.cl-formFieldInput,
+#identifier-field {
+  @apply dark:bg-[#1f1f23];
+}
+
+@layer components {
+  .border,
+  .border-r,
+  .border-l,
+  .border-t,
+  .border-b,
+  .border-x,
+  .border-y {
+    @apply dark:border-slate-700;
+  }
+
+  .divide-x,
+  .divide-y {
+    @apply dark:divide-slate-700;
+  }
+}
