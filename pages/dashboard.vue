@@ -1,6 +1,5 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: 'protected',
   middleware: 'auth',
   auth: {
     navigateUnauthenticatedTo: '/sign-in',
