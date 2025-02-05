@@ -1,14 +1,5 @@
 <script setup lang="ts">
 import { Moon, Sun } from 'lucide-vue-next';
-
-const toggleTheme = () => {
-  const colorMode = useColorMode();
-  if (colorMode.value === 'dark') {
-    colorMode.preference = 'light';
-  } else {
-    colorMode.preference = 'dark';
-  }
-};
 </script>
 <template>
   <DropdownMenu>
