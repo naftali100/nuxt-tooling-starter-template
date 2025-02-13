@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     'nuxt-security', // optionally includes nuxt-csurf
     'nuxt-zod-i18n',
     'shadcn-nuxt',
-    'vue-clerk/nuxt',
+    '@clerk/nuxt',
   ],
   runtimeConfig: {
     databaseUrl: process.env.DATABASE_URL,

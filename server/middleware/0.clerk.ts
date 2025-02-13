@@ -1,3 +1,3 @@
-import { clerkMiddleware } from 'vue-clerk/server';
+import { clerkMiddleware } from '@clerk/nuxt/server';
 
 export default clerkMiddleware();
