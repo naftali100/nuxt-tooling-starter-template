@@ -1,7 +1,6 @@
-import { clerkClient } from '@clerk/nuxt/server';
+import { clerkMiddleware, clerkClient } from '@clerk/nuxt/server';
 
-// makes sure that only authenticated users can access the api
-export default defineEventHandler(async (event) => {
+export default clerkMiddleware(async (event) => {
   const path = event.path;
   if (!path.startsWith('/api')) {
     return;

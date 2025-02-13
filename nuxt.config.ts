@@ -68,7 +68,6 @@ export default defineNuxtConfig({
     fallback: 'dark',
   },
   clerk: {
-    __experimental_skipServerMiddleware: true,
     telemetry: {
       disabled: true,
     },
