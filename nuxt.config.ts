@@ -1,3 +1,5 @@
+import tailwindcss from '@tailwindcss/vite';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -36,7 +38,7 @@ export default defineNuxtConfig({
   },
   security: {
     // rateLimiter: false,
-    strict: false,
+    strict: false, //change it when you ready. check the docs
     headers: {
       contentSecurityPolicy: {
         'img-src': ["'self'", 'data:', 'https://img.clerk.com'],
@@ -107,6 +109,17 @@ export default defineNuxtConfig({
       localeDetector: './languageDetector.ts',
     },
   },
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './components/ui',
+  },
   zodI18n: {
     useModuleLocale: false,
   },
@@ -127,6 +140,7 @@ export default defineNuxtConfig({
     },
   },
   vite: {
+    plugins: [tailwindcss()],
     build: {
       target: 'esnext',
     },

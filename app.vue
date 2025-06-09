@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Toaster } from '@/components/ui/sonner';
 import { dark } from '@clerk/themes';
-import { ConfigProvider as RadixConfigProvider } from 'radix-vue';
+import { ConfigProvider as RekaConfigProvider } from 'reka-ui';
 const clerk = useClerk();
 const colorMode = useColorMode();
 const { locale, localeProperties } = useI18n();
@@ -53,11 +53,11 @@ useHead({
   <div class="">
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator />
-    <RadixConfigProvider :dir="localeProperties.dir === 'rtl' ? 'rtl' : 'ltr'">
+    <RekaConfigProvider :dir="localeProperties.dir === 'rtl' ? 'rtl' : 'ltr'">
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-    </RadixConfigProvider>
+    </RekaConfigProvider>
     <ClientOnly>
       <Toaster
         rich-colors

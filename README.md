@@ -16,7 +16,7 @@ A feature-packed Nuxt 3 starter template designed to streamline your development
 - 🗄️ **Drizzle ORM** for database management.
 - 🐘 **Postgres** as the database.
 - 🔔 **Vue-sonner** for toast notifications.
-- 📦 **pre-made components**.
+- 📦 **pre-made components** switchers, confirm modal and more.
 - 🔒 **Security** configuration with strict CSP.
 - 📝 **Logging** with Winston.
 
