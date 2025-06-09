@@ -42,7 +42,7 @@ const toggleReveal = () => {
         type="text"
         :value="displayedValue"
         readonly
-        class="flex-grow rounded-e-none font-mono"
+        class="grow rounded-e-none font-mono"
       />
       <Button
         type="button"
