@@ -1,13 +1,12 @@
-import { clerkClient, getAuth } from 'vue-clerk/server';
+import { clerkMiddleware, clerkClient } from '@clerk/nuxt/server';
 
-// makes sure that only authenticated users can access the api
-export default defineEventHandler(async (event) => {
+export default clerkMiddleware(async (event) => {
   const path = event.path;
   if (!path.startsWith('/api')) {
     return;
   }
 
-  const auth = getAuth(event);
+  const auth = event.context.auth;
 
   const userId = auth?.userId;
   if (!userId) {

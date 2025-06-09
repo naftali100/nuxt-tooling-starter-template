@@ -5,13 +5,13 @@ import { ConfigProvider as RekaConfigProvider } from 'reka-ui';
 const clerk = useClerk();
 const colorMode = useColorMode();
 const { locale, localeProperties } = useI18n();
-
 watchEffect(() => {
-  if (colorMode.value === 'dark') {
-    clerk.__unstable__updateProps({ appearance: { baseTheme: dark } });
-  } else {
-    clerk.__unstable__updateProps({ appearance: {} });
-  }
+  // clerk.value?.
+  // if (colorMode.value === 'dark') {
+  //   clerk.__unstable__updateProps({ appearance: { baseTheme: dark } });
+  // } else {
+  //   clerk.__unstable__updateProps({ appearance: {} });
+  // }
 
   useHead({
     htmlAttrs: {

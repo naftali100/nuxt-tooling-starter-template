@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  middleware: 'auth',
+  middleware: ['auth'],
   auth: {
     navigateUnauthenticatedTo: '/sign-in',
     guestRedirectUrl: '/sign-in',
@@ -11,5 +11,6 @@ definePageMeta({
   <div>
     <div class="mb-5" />
     <NuxtPage />
+    <UserButton />
   </div>
 </template>

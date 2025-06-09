@@ -18,6 +18,7 @@
   "dependencies": {
     "@clerk/backend": "^2.0.0",
     "@clerk/localizations": "^3.16.4",
+    "@clerk/nuxt": "^1.1.4",
     "@clerk/themes": "^2.2.49",
     "@internationalized/date": "^3.8.2",
     "@nuxt/devtools": "^2.5.0",
@@ -56,7 +57,6 @@
     "vaul-vue": "^0.4.1",
     "vee-validate": "^4.15.1",
     "vue": "^3.5.16",
-    "vue-clerk": "^0.8.7",
     "vue-router": "latest",
     "vue-sonner": "^2.0.0",
     "winston": "^3.17.0",
