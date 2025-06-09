@@ -9,6 +9,7 @@
   "deleteConfirm": "Cette action est irréversible. Cela supprimera définitivement ces données de nos serveurs.",
   "edit": "Modifier",
   "enabled": "activé",
+  "disabled": "Disabled",
   "error": "Erreur",
   "errorCode": "Code d'erreur",
   "loading": "Chargement",
