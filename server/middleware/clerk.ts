@@ -6,7 +6,7 @@ export default clerkMiddleware(async (event) => {
     return;
   }
 
-  const auth = event.context.auth;
+  const auth = event.context.auth();
 
   const userId = auth?.userId;
   if (!userId) {

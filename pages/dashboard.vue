@@ -11,6 +11,5 @@ definePageMeta({
   <div>
     <div class="mb-5" />
     <NuxtPage />
-    <UserButton />
   </div>
 </template>
