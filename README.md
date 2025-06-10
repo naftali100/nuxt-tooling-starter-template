@@ -56,6 +56,18 @@ pnpm dlx shadcn-vue@latest init
 pnpm dlx shadcn-vue@latest add
 ```
 
+### Step 5: generate migrations & migrate database
+
+```bash
+npx drizzle-kit generate && npm run db:migrate
+```
+
+### Step 6: run the app
+
+```bash
+npm run dev
+```
+
 ---
 
 ## Security
@@ -192,5 +204,5 @@ This project is licensed under the [MIT License](./LICENSE).
 
 ## TODO
 
-- [ ] update clerk to official version
-- [ ] update tailwind to v4
+- [ ] update clerk to official version (done, theme switch not working)
+- [x] update tailwind to v4
