@@ -70,6 +70,7 @@ export default defineNuxtConfig({
     fallback: 'dark',
   },
   clerk: {
+    skipServerMiddleware: true,
     telemetry: {
       disabled: true,
     },
