@@ -16,7 +16,7 @@ A feature-packed Nuxt 3 starter template designed to streamline your development
 - 🗄️ **Drizzle ORM** for database management.
 - 🐘 **Postgres** as the database.
 - 🔔 **Vue-sonner** for toast notifications.
-- 📦 **pre-made components**.
+- 📦 **pre-made components** switchers, confirm modal and more.
 - 🔒 **Security** configuration with strict CSP.
 - 📝 **Logging** with Winston.
 
@@ -54,6 +54,18 @@ remove the `components/ui` folder, remove `components.json` file, and run
 pnpm dlx shadcn-vue@latest init
 
 pnpm dlx shadcn-vue@latest add
+```
+
+### Step 5: generate migrations & migrate database
+
+```bash
+npx drizzle-kit generate && npm run db:migrate
+```
+
+### Step 6: run the app
+
+```bash
+npm run dev
 ```
 
 ---
@@ -192,5 +204,5 @@ This project is licensed under the [MIT License](./LICENSE).
 
 ## TODO
 
-- [ ] update clerk to official version
-- [ ] update tailwind to v4
+- [ ] update clerk to official version (done, theme switch not working)
+- [x] update tailwind to v4

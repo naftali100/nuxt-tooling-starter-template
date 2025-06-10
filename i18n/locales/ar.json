@@ -1,0 +1,147 @@
+{
+  "404": "الصفحة غير موجودة",
+  "areYouSure": "هل أنت متأكد؟",
+  "backHome": "العودة إلى الصفحة الرئيسية",
+  "cancel": "إلغاء",
+  "clear": "مسح",
+  "close": "إغلاق",
+  "delete": "حذف",
+  "deleteConfirm": "هذه العملية لا يمكن عكسها. سوف تحذف هذه البيانات نهائيًا من خوادمنا.",
+  "edit": "تعديل",
+  "enabled": "مفعل",
+  "disabled": "Disabled",
+  "error": "خطأ",
+  "errorCode": "رمز الخطأ",
+  "loading": "جاري التحميل",
+  "loading...": "جاري التحميل...",
+  "no": "لا",
+  "ok": "موافق",
+  "pageNotFound": "الصفحة غير موجودة",
+  "pickADate": "اختر تاريخًا",
+  "refresh": "تحديث",
+  "save": "حفظ",
+  "submit": "تقديم",
+  "success": "نجاح",
+  "themeOptions": {
+    "dark": "غامق",
+    "light": "فاتح",
+    "system": "نظام"
+  },
+  "unknown": "غير معروف",
+  "update": "تحديث",
+  "welcome": "مرحبًا في Nuxt 3",
+  "yes": "نعم",
+  "zodI18n": {
+    "errors": {
+      "custom": "إدخال غير صالح",
+      "invalid_arguments": "معاملات الدالة غير صالحة",
+      "invalid_date": "تاريخ غير صالح",
+      "invalid_enum_value": "قيمة تعداد غير صالحة. من المتوقع مراجعة {options}، تم استلام '{received}'",
+      "invalid_intersection_types": "لا يمكن دمج نتائج التلاقي",
+      "invalid_literal": "قيمة حرفية غير صالحة، من المتوقع {expected}",
+      "invalid_return_type": "نوع إرجاع الدالة غير صالح",
+      "invalid_string": {
+        "cuid": "غير صالح {validation}",
+        "datetime": "غير صالح {validation}",
+        "email": "غير صالح {validation}",
+        "endsWith": "إدخال غير صالح: يجب أن ينتهي بـ \"{endsWith}\"",
+        "regex": "غير صالح",
+        "startsWith": "إدخال غير صالح: يجب أن يبدأ بـ \"{startsWith}\"",
+        "url": "غير صالح {validation}",
+        "uuid": "غير صالح {validation}"
+      },
+      "invalid_type": "من المتوقع {expected}، تم استلام {received}",
+      "invalid_type_received_undefined": "مطلوب",
+      "invalid_union": "إدخال غير صالح",
+      "invalid_union_discriminator": "قيمة المميز غير صالحة. من المتوقع مراجعة {options}",
+      "not_finite": "يجب أن يكون الرقم نهائيًا",
+      "not_multiple_of": "يجب أن يكون الرقم من مضاعفات {multipleOf}",
+      "required": "مطلوب",
+      "too_big": {
+        "array": {
+          "exact": "يجب أن تحتوي المصفوفة على {maximum} عنصرًا بالضبط",
+          "inclusive": "يجب أن تحتوي المصفوفة على {maximum} عنصرًا كحد أقصى",
+          "not_inclusive": "يجب أن تحتوي المصفوفة على أقل من {maximum} عنصرًا"
+        },
+        "date": {
+          "exact": "يجب أن يكون التاريخ بالضبط {maximum}",
+          "inclusive": "يجب أن يكون التاريخ أصغر من أو يساوي {maximum}",
+          "not_inclusive": "يجب أن يكون التاريخ أصغر من {maximum}"
+        },
+        "number": {
+          "exact": "يجب أن يكون الرقم بالضبط {maximum}",
+          "inclusive": "يجب أن يكون الرقم أقل من أو يساوي {maximum}",
+          "not_inclusive": "يجب أن يكون الرقم أقل من {maximum}"
+        },
+        "set": {
+          "exact": "إدخال غير صالح",
+          "inclusive": "إدخال غير صالح",
+          "not_inclusive": "إدخال غير صالح"
+        },
+        "string": {
+          "exact": "يجب أن تحتوي السلسلة على {maximum} حرفًا بالضبط",
+          "inclusive": "يجب أن تحتوي السلسلة على {maximum} حرفًا كحد أقصى",
+          "not_inclusive": "يجب أن تحتوي السلسلة على أقل من {maximum} حرفًا"
+        }
+      },
+      "too_small": {
+        "array": {
+          "exact": "يجب أن تحتوي المصفوفة على {minimum} عنصرًا بالضبط",
+          "inclusive": "يجب أن تحتوي المصفوفة على {minimum} عنصرًا كحد أدنى",
+          "not_inclusive": "يجب أن تحتوي المصفوفة على أكثر من {minimum} عنصرًا"
+        },
+        "date": {
+          "exact": "يجب أن يكون التاريخ بالضبط {minimum}",
+          "inclusive": "يجب أن يكون التاريخ أكبر من أو يساوي {minimum}",
+          "not_inclusive": "يجب أن يكون التاريخ أكبر من {minimum}"
+        },
+        "number": {
+          "exact": "يجب أن يكون الرقم بالضبط {minimum}",
+          "inclusive": "يجب أن يكون الرقم أكبر من أو يساوي {minimum}",
+          "not_inclusive": "يجب أن يكون الرقم أكبر من {minimum}"
+        },
+        "set": {
+          "exact": "إدخال غير صالح",
+          "inclusive": "إدخال غير صالح",
+          "not_inclusive": "إدخال غير صالح"
+        },
+        "string": {
+          "exact": "يجب أن تحتوي السلسلة على {minimum} حرفًا بالضبط",
+          "inclusive": "يجب أن تحتوي السلسلة على {minimum} حرفًا كحد أدنى",
+          "not_inclusive": "يجب أن تحتوي السلسلة على أكثر من {minimum} حرفًا"
+        }
+      },
+      "unrecognized_keys": "مفتاح(ات) غير معترف بها في الكائن: {keys} للمراجعة"
+    },
+    "types": {
+      "array": "مصفوفة",
+      "bigint": "عدد كبير",
+      "boolean": "قيمة منطقية",
+      "date": "تاريخ",
+      "float": "عدد عشري",
+      "function": "دالة",
+      "integer": "عدد صحيح",
+      "map": "خريطة",
+      "nan": "ليس عددًا",
+      "never": "أبدًا",
+      "null": "فارغ",
+      "number": "رقم",
+      "object": "كائن",
+      "promise": "وعد",
+      "set": "مجموعة",
+      "string": "سلسلة",
+      "symbol": "رمز",
+      "undefined": "غير معرف",
+      "unknown": "غير معروف",
+      "void": "فارغ"
+    },
+    "validations": {
+      "cuid": "cuid",
+      "datetime": "تاريخ ووقت",
+      "email": "بريد إلكتروني",
+      "regex": "تعبير منتظم",
+      "url": "رابط",
+      "uuid": "uuid"
+    }
+  }
+}
