@@ -63,6 +63,7 @@
     "vue": "^3.5.18",
     "vue-router": "latest",
     "vue-sonner": "^2.0.2",
+    "vue-tsc": "^3.0.4",
     "winston": "^3.17.0",
     "winston-daily-rotate-file": "^5.0.0",
     "zod": "^4.0.13"
