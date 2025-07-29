@@ -4,9 +4,9 @@
   "typescript": true,
   "tailwind": {
     "config": "tailwind.config.js",
-    "css": "assets/css/tailwind.css",
+    "css": "app/assets/css/tailwind.css",
     "baseColor": "slate",
-    "cssVariables": false,
+    "cssVariables": true,
     "prefix": ""
   },
   "aliases": {
