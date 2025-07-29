@@ -204,5 +204,5 @@ This project is licensed under the [MIT License](./LICENSE).
 
 ## TODO
 
-- [ ] update clerk to official version (done, theme switch not working)
+- [x] update clerk to official version (done, theme switch not working)
 - [x] update tailwind to v4
