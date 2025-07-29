@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Toaster } from '@/components/ui/sonner';
-import { dark } from '@clerk/themes';
+// import { dark, shadcn } from '@clerk/themes';
 import { heIL, enUS, frFR, arSA } from '@clerk/localizations';
 import { ConfigProvider as RekaConfigProvider } from 'reka-ui';
 const clerk = useClerk();
@@ -8,20 +8,20 @@ const colorMode = useColorMode();
 const { locale, localeProperties } = useI18n();
 watchEffect(() => {
   if (clerk.value?.loaded) {
-    if (colorMode.value === 'dark') {
-      // TODO: theme switcher not working
-      updateClerkOptions({
-        appearance: {
-          baseTheme: dark,
-        },
-      });
-    } else {
-      updateClerkOptions({
-        appearance: {
-          baseTheme: undefined,
-        },
-      });
-    }
+    // if (colorMode.value === 'dark') {
+    //   // TODO: theme switcher not working
+    //   updateClerkOptions({
+    //     appearance: {
+    //       baseTheme: shadcn,
+    //     },
+    //   });
+    // } else {
+    //   updateClerkOptions({
+    //     appearance: {
+    //       baseTheme: undefined,
+    //     },
+    //   });
+    // }
 
     const clerkLanguages = {
       he: heIL,
