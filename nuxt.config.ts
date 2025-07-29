@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
     'nuxt-security', // optionally includes nuxt-csurf
-    'nuxt-zod-i18n',
+    // 'nuxt-zod-i18n',
     'shadcn-nuxt',
     '@clerk/nuxt',
   ],
@@ -120,9 +120,9 @@ export default defineNuxtConfig({
      */
     componentDir: './components/ui',
   },
-  zodI18n: {
-    useModuleLocale: false,
-  },
+  // zodI18n: {
+  //   useModuleLocale: false,
+  // },
   typescript: {
     // typeCheck: true,
     tsConfig: {
