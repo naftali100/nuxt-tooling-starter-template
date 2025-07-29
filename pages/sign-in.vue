@@ -1,6 +1,4 @@
-<script setup>
-definePageMeta({ middleware: 'guest' });
-</script>
+<script setup></script>
 
 <template>
   <div class="flex justify-center py-24">
