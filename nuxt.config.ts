@@ -1,4 +1,5 @@
 import tailwindcss from '@tailwindcss/vite';
+import { shadcn } from '@clerk/themes';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -74,6 +75,9 @@ export default defineNuxtConfig({
     telemetry: {
       disabled: true,
     },
+    appearance: {
+      baseTheme: shadcn,
+    },
   },
   i18n: {
     locales: [
@@ -118,7 +122,7 @@ export default defineNuxtConfig({
      * Directory that the component lives in.
      * @default "./components/ui"
      */
-    componentDir: './components/ui',
+    componentDir: './app/components/ui',
   },
   // zodI18n: {
   //   useModuleLocale: false,
