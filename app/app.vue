@@ -3,6 +3,7 @@ import { Toaster } from '@/components/ui/sonner';
 // import { dark, shadcn } from '@clerk/themes';
 import { heIL, enUS, frFR, arSA } from '@clerk/localizations';
 import { ConfigProvider as RekaConfigProvider } from 'reka-ui';
+
 const clerk = useClerk();
 const colorMode = useColorMode();
 const { locale, localeProperties } = useI18n();
