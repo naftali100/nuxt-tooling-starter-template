@@ -3,7 +3,7 @@ import { shadcn } from '@clerk/themes';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
+  compatibilityDate: '2025-07-15',
   telemetry: false,
   devtools: {
     enabled: true,
@@ -24,10 +24,10 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/image',
+    '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxtjs/i18n',
     '@nuxtjs/seo',
-    '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
     'nuxt-security', // optionally includes nuxt-csurf
     // 'nuxt-zod-i18n',
@@ -64,6 +64,7 @@ export default defineNuxtConfig({
     typedPages: true,
     buildCache: true,
     writeEarlyHints: true,
+    entryImportMap: false, // breaks in production
     // appManifest: false
   },
   colorMode: {
@@ -128,7 +129,7 @@ export default defineNuxtConfig({
   //   useModuleLocale: false,
   // },
   typescript: {
-    // typeCheck: true,
+    typeCheck: true,
     tsConfig: {
       compilerOptions: {
         target: 'ESNext',

@@ -30,4 +30,11 @@ export default withNuxt([
       'vue/multi-word-component-names': 'off',
     },
   },
+  {
+    // files: ['*'],
+    // TMP: errors with unified-signatures rule in vue files
+    rules: {
+      '@typescript-eslint/unified-signatures': 'off',
+    },
+  },
 ]);
