@@ -1,4 +1,3 @@
-import tailwindcss from '@tailwindcss/vite';
 import { shadcn } from '@clerk/themes';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -47,7 +46,7 @@ export default defineNuxtConfig({
         'style-src': ["'self'", "'unsafe-inline'"],
         'connect-src': [
           "'self'",
-          'CHANGE_ME', // add your local server here
+          'https://daring-stinkbug-43.clerk.accounts.dev', // add your local server here
         ],
         'worker-src': ["'self'", 'blob:'],
         'frame-src': ["'self'", 'https://challenges.cloudflare.com'],
@@ -149,13 +148,6 @@ export default defineNuxtConfig({
       options: {
         target: 'esnext',
       },
-    },
-  },
-  css: ['~/assets/css/tailwind.css'],
-  vite: {
-    plugins: [tailwindcss()],
-    build: {
-      target: 'esnext',
     },
   },
 });
