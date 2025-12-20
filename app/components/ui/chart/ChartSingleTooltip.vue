@@ -43,7 +43,7 @@ function template(d: any, i: number, elements: (HTMLElement | SVGElement)[]) {
     if (wm.has(data)) {
       return wm.get(data);
     } else {
-      const style = getComputedStyle(elements[i]);
+      const style = getComputedStyle(elements[i] as Element);
       const omittedData = [
         {
           name: data.name,
