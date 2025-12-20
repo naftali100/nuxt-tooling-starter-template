@@ -1,11 +1,8 @@
 <script setup lang="ts">
+import type { ScrollAreaScrollbarProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
-import {
-  ScrollAreaScrollbar,
-  type ScrollAreaScrollbarProps,
-  ScrollAreaThumb,
-} from 'reka-ui';
+import { ScrollAreaScrollbar, ScrollAreaThumb } from 'reka-ui';
 import { cn } from '@/lib/utils';
 
 const props = withDefaults(
@@ -20,22 +17,24 @@ const delegatedProps = reactiveOmit(props, 'class');
 
 <template>
   <ScrollAreaScrollbar
-    data-slot="scroll-area-scrollbar"
     v-bind="delegatedProps"
     :class="
       cn(
-        'flex touch-none p-px transition-colors select-none',
+        'flex touch-none transition-colors select-none',
         orientation === 'vertical' &&
-          'h-full w-2.5 border-l border-l-transparent',
+          'h-full w-2.5 border-l border-l-transparent p-px',
         orientation === 'horizontal' &&
-          'h-2.5 flex-col border-t border-t-transparent',
+          'h-2.5 flex-col border-t border-t-transparent p-px',
         props.class,
       )
     "
   >
     <ScrollAreaThumb
-      data-slot="scroll-area-thumb"
-      class="bg-border relative flex-1 rounded-full"
+      class="relative"
+      flex-1
+      rounded-full
+      bg-slate-200
+      dark:bg-slate-800
     />
   </ScrollAreaScrollbar>
 </template>

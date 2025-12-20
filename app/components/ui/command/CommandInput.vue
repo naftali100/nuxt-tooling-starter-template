@@ -1,12 +1,9 @@
 <script setup lang="ts">
+import type { ListboxFilterProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
 import { Search } from 'lucide-vue-next';
-import {
-  ListboxFilter,
-  type ListboxFilterProps,
-  useForwardProps,
-} from 'reka-ui';
+import { ListboxFilter, useForwardProps } from 'reka-ui';
 import { cn } from '@/lib/utils';
 import { useCommand } from '.';
 
@@ -28,19 +25,15 @@ const { filterState } = useCommand();
 </script>
 
 <template>
-  <div
-    data-slot="command-input-wrapper"
-    class="flex h-12 items-center gap-2 border-b px-3"
-  >
-    <Search class="size-4 shrink-0 opacity-50" />
+  <div class="flex items-center border-b px-3" cmdk-input-wrapper>
+    <Search class="mr-2 h-4 w-4 shrink-0 opacity-50" />
     <ListboxFilter
       v-bind="{ ...forwardedProps, ...$attrs }"
       v-model="filterState.search"
-      data-slot="command-input"
       auto-focus
       :class="
         cn(
-          'placeholder:text-muted-foreground flex h-12 w-full rounded-md bg-transparent py-3 text-sm outline-hidden disabled:cursor-not-allowed disabled:opacity-50',
+          'flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-slate-500 disabled:cursor-not-allowed disabled:opacity-50 dark:placeholder:text-slate-400',
           props.class,
         )
       "

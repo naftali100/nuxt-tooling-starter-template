@@ -9,12 +9,9 @@ const props = defineProps<{
 
 <template>
   <div
-    data-slot="card-action"
+    data-slot="item-footer"
     :class="
-      cn(
-        'col-start-2 row-span-2 row-start-1 self-start justify-self-end',
-        props.class,
-      )
+      cn('flex basis-full items-center justify-between gap-2', props.class)
     "
   >
     <slot />

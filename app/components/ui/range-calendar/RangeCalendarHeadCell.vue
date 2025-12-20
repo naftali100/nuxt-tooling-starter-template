@@ -1,11 +1,8 @@
 <script lang="ts" setup>
+import type { RangeCalendarHeadCellProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
-import {
-  RangeCalendarHeadCell,
-  type RangeCalendarHeadCellProps,
-  useForwardProps,
-} from 'reka-ui';
+import { RangeCalendarHeadCell, useForwardProps } from 'reka-ui';
 import { cn } from '@/lib/utils';
 
 const props = defineProps<
@@ -19,10 +16,9 @@ const forwardedProps = useForwardProps(delegatedProps);
 
 <template>
   <RangeCalendarHeadCell
-    data-slot="range-calendar-head-cell"
     :class="
       cn(
-        'text-muted-foreground w-8 rounded-md text-[0.8rem] font-normal',
+        'w-8 rounded-md text-[0.8rem] font-normal text-slate-500 dark:text-slate-400',
         props.class,
       )
     "

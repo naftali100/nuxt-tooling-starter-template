@@ -23,31 +23,25 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
 
 <template>
   <SliderRoot
-    v-slot="{ modelValue }"
-    data-slot="slider"
     :class="
       cn(
-        'relative flex w-full touch-none items-center select-none data-[disabled]:opacity-50 data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col',
+        'relative flex w-full touch-none items-center select-none data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1.5 data-[orientation=vertical]:flex-col',
         props.class,
       )
     "
     v-bind="forwarded"
   >
     <SliderTrack
-      data-slot="slider-track"
-      class="bg-muted relative grow overflow-hidden rounded-full data-[orientation=horizontal]:h-1.5 data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1.5"
+      class="relative h-1.5 w-full grow overflow-hidden rounded-full bg-slate-900/20 data-[orientation=vertical]:w-1.5 dark:bg-slate-50/20"
     >
       <SliderRange
-        data-slot="slider-range"
-        class="bg-primary absolute data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full"
+        class="absolute h-full bg-slate-900 data-[orientation=vertical]:w-full dark:bg-slate-50"
       />
     </SliderTrack>
-
     <SliderThumb
       v-for="(_, key) in modelValue"
       :key="key"
-      data-slot="slider-thumb"
-      class="border-primary bg-background ring-ring/50 block size-4 shrink-0 rounded-full border shadow-sm transition-[color,box-shadow] hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50"
+      class="block h-5 w-5 rounded-full border-2 border-slate-900 bg-white ring-offset-white transition-colors focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-slate-50 dark:bg-slate-950 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300"
     />
   </SliderRoot>
 </template>

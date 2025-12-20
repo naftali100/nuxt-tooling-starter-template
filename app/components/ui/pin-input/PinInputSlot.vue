@@ -1,11 +1,8 @@
 <script setup lang="ts">
+import type { PinInputInputProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
-import {
-  PinInputInput,
-  type PinInputInputProps,
-  useForwardProps,
-} from 'reka-ui';
+import { PinInputInput, useForwardProps } from 'reka-ui';
 import { cn } from '@/lib/utils';
 
 const props = defineProps<
@@ -19,11 +16,10 @@ const forwardedProps = useForwardProps(delegatedProps);
 
 <template>
   <PinInputInput
-    data-slot="pin-input-slot"
     v-bind="forwardedProps"
     :class="
       cn(
-        'border-input focus:border-ring focus:ring-ring/50 focus:aria-invalid:ring-destructive/20 dark:bg-input/30 dark:focus:aria-invalid:ring-destructive/40 aria-invalid:border-destructive focus:aria-invalid:border-destructive relative flex h-9 w-9 items-center justify-center border-y border-r text-center text-sm shadow-xs transition-all outline-none first:rounded-l-md first:border-l last:rounded-r-md focus:z-10 focus:ring-[3px]',
+        'relative flex h-9 w-9 items-center justify-center border-y border-r border-slate-200 text-center text-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md focus:relative focus:z-10 focus:ring-2 focus:ring-slate-950 focus:outline-none dark:border-slate-800 dark:focus:ring-slate-300',
         props.class,
       )
     "

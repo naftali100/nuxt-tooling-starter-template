@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import type { ListboxRootEmits, ListboxRootProps } from 'reka-ui';
+import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
 import { ListboxRoot, useFilter, useForwardPropsEmits } from 'reka-ui';
-import { type HTMLAttributes, reactive, ref, watch } from 'vue';
+import { reactive, ref, watch } from 'vue';
 import { cn } from '@/lib/utils';
 import { provideCommandContext } from '.';
 
@@ -66,10 +67,6 @@ function filterItems() {
   filterState.filtered.count = itemCount;
 }
 
-function handleSelect() {
-  filterState.search = '';
-}
-
 watch(
   () => filterState.search,
   () => {
@@ -86,11 +83,10 @@ provideCommandContext({
 
 <template>
   <ListboxRoot
-    data-slot="command"
     v-bind="forwarded"
     :class="
       cn(
-        'bg-popover text-popover-foreground flex h-full w-full flex-col overflow-hidden rounded-md',
+        'flex h-full w-full flex-col overflow-hidden rounded-md bg-white text-slate-950 dark:bg-slate-950 dark:text-slate-50',
         props.class,
       )
     "

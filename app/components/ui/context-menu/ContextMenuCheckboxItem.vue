@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import type {
+  ContextMenuCheckboxItemEmits,
+  ContextMenuCheckboxItemProps,
+} from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
 import { Check } from 'lucide-vue-next';
 import {
   ContextMenuCheckboxItem,
-  type ContextMenuCheckboxItemEmits,
-  type ContextMenuCheckboxItemProps,
   ContextMenuItemIndicator,
   useForwardPropsEmits,
 } from 'reka-ui';
@@ -23,20 +25,17 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
 
 <template>
   <ContextMenuCheckboxItem
-    data-slot="context-menu-checkbox-item"
     v-bind="forwarded"
     :class="
       cn(
-        `focus:bg-accent focus:text-accent-foreground relative flex cursor-default items-center gap-2 rounded-sm py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4`,
+        'relative flex cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 text-sm outline-none select-none focus:bg-slate-100 focus:text-slate-900 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-800 dark:focus:text-slate-50',
         props.class,
       )
     "
   >
-    <span
-      class="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center"
-    >
+    <span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <ContextMenuItemIndicator>
-        <Check class="size-4" />
+        <Check class="h-4 w-4" />
       </ContextMenuItemIndicator>
     </span>
     <slot />

@@ -14,9 +14,8 @@ const delegatedProps = reactiveOmit(props, 'class');
 
 <template>
   <ComboboxSeparator
-    data-slot="combobox-separator"
     v-bind="delegatedProps"
-    :class="cn('bg-border -mx-1 h-px', props.class)"
+    :class="cn('-mx-1 h-px bg-slate-200 dark:bg-slate-800', props.class)"
   >
     <slot />
   </ComboboxSeparator>

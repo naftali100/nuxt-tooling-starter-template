@@ -19,11 +19,11 @@ const forwarded = useForwardProps(delegatedProps);
     v-bind="forwarded"
     :class="
       cn(
-        'bg-muted',
+        'bg-slate-100 dark:bg-slate-800',
         // Disabled
-        'group-data-[disabled]:bg-muted group-data-[disabled]:opacity-50',
+        'group-data-[disabled]:bg-slate-100 group-data-[disabled]:opacity-50 dark:group-data-[disabled]:bg-slate-800',
         // Completed
-        'group-data-[state=completed]:bg-accent-foreground',
+        'group-data-[state=completed]:bg-slate-900 dark:group-data-[state=completed]:bg-slate-50',
         props.class,
       )
     "

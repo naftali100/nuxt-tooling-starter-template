@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import type { DialogTitleProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
-import { DialogTitle, type DialogTitleProps } from 'reka-ui';
+import { DialogTitle } from 'reka-ui';
 import { cn } from '@/lib/utils';
 
 const props = defineProps<
@@ -13,8 +14,9 @@ const delegatedProps = reactiveOmit(props, 'class');
 
 <template>
   <DialogTitle
-    data-slot="sheet-title"
-    :class="cn('text-foreground font-semibold', props.class)"
+    :class="
+      cn('text-lg font-semibold text-slate-950 dark:text-slate-50', props.class)
+    "
     v-bind="delegatedProps"
   >
     <slot />

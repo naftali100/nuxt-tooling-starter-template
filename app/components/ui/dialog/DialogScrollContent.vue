@@ -1,12 +1,11 @@
 <script setup lang="ts">
+import type { DialogContentEmits, DialogContentProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
 import { X } from 'lucide-vue-next';
 import {
   DialogClose,
   DialogContent,
-  type DialogContentEmits,
-  type DialogContentProps,
   DialogOverlay,
   DialogPortal,
   useForwardPropsEmits,
@@ -31,7 +30,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
       <DialogContent
         :class="
           cn(
-            'border-border bg-background relative z-50 my-8 grid w-full max-w-lg gap-4 border p-6 shadow-lg duration-200 sm:rounded-lg md:w-full',
+            'relative z-50 my-8 grid w-full max-w-lg gap-4 border border-slate-200 bg-white p-6 shadow-lg duration-200 sm:rounded-lg md:w-full dark:border-slate-800 dark:bg-slate-950',
             props.class,
           )
         "
@@ -52,7 +51,14 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
         <slot />
 
         <DialogClose
-          class="hover:bg-secondary absolute top-4 right-4 rounded-md p-0.5 transition-colors"
+          class="absolute"
+          top-4
+          right-4
+          p-0.5
+          transition-colors
+          rounded-md
+          hover:bg-slate-100
+          dark:hover:bg-slate-800
         >
           <X class="h-4 w-4" />
           <span class="sr-only">Close</span>

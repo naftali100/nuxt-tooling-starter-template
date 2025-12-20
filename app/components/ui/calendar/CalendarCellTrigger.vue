@@ -1,20 +1,14 @@
 <script lang="ts" setup>
+import type { CalendarCellTriggerProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
-import {
-  CalendarCellTrigger,
-  type CalendarCellTriggerProps,
-  useForwardProps,
-} from 'reka-ui';
+import { CalendarCellTrigger, useForwardProps } from 'reka-ui';
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 
-const props = withDefaults(
-  defineProps<CalendarCellTriggerProps & { class?: HTMLAttributes['class'] }>(),
-  {
-    as: 'button',
-  },
-);
+const props = defineProps<
+  CalendarCellTriggerProps & { class?: HTMLAttributes['class'] }
+>();
 
 const delegatedProps = reactiveOmit(props, 'class');
 
@@ -23,20 +17,19 @@ const forwardedProps = useForwardProps(delegatedProps);
 
 <template>
   <CalendarCellTrigger
-    data-slot="calendar-cell-trigger"
     :class="
       cn(
         buttonVariants({ variant: 'ghost' }),
-        'size-8 cursor-default p-0 font-normal aria-selected:opacity-100',
-        '[&[data-today]:not([data-selected])]:bg-accent [&[data-today]:not([data-selected])]:text-accent-foreground',
+        'h-8 w-8 p-0 font-normal',
+        '[&[data-today]:not([data-selected])]:bg-slate-100 [&[data-today]:not([data-selected])]:text-slate-900 dark:[&[data-today]:not([data-selected])]:bg-slate-800 dark:[&[data-today]:not([data-selected])]:text-slate-50',
         // Selected
-        'data-[selected]:bg-primary data-[selected]:text-primary-foreground data-[selected]:hover:bg-primary data-[selected]:hover:text-primary-foreground data-[selected]:focus:bg-primary data-[selected]:focus:text-primary-foreground data-[selected]:opacity-100',
+        'data-[selected]:bg-slate-900 data-[selected]:text-slate-50 data-[selected]:opacity-100 data-[selected]:hover:bg-slate-900 data-[selected]:hover:text-slate-50 data-[selected]:focus:bg-slate-900 data-[selected]:focus:text-slate-50 dark:data-[selected]:bg-slate-50 dark:data-[selected]:text-slate-900 dark:data-[selected]:hover:bg-slate-50 dark:data-[selected]:hover:text-slate-900 dark:data-[selected]:focus:bg-slate-50 dark:data-[selected]:focus:text-slate-900',
         // Disabled
-        'data-[disabled]:text-muted-foreground data-[disabled]:opacity-50',
+        'data-[disabled]:text-slate-500 data-[disabled]:opacity-50 dark:data-[disabled]:text-slate-400',
         // Unavailable
-        'data-[unavailable]:text-destructive-foreground data-[unavailable]:line-through',
+        'data-[unavailable]:text-slate-50 data-[unavailable]:line-through dark:data-[unavailable]:text-slate-50',
         // Outside months
-        'data-[outside-view]:text-muted-foreground',
+        'data-[outside-view]:text-slate-500 data-[outside-view]:opacity-50 dark:data-[outside-view]:text-slate-400 [&[data-outside-view][data-selected]]:bg-slate-100/50 [&[data-outside-view][data-selected]]:text-slate-500 [&[data-outside-view][data-selected]]:opacity-30 dark:[&[data-outside-view][data-selected]]:bg-slate-800/50 dark:[&[data-outside-view][data-selected]]:text-slate-400',
         props.class,
       )
     "

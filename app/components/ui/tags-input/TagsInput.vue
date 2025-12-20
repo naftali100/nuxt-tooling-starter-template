@@ -1,12 +1,8 @@
 <script setup lang="ts">
+import type { TagsInputRootEmits, TagsInputRootProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
-import {
-  TagsInputRoot,
-  type TagsInputRootEmits,
-  type TagsInputRootProps,
-  useForwardPropsEmits,
-} from 'reka-ui';
+import { TagsInputRoot, useForwardPropsEmits } from 'reka-ui';
 import { cn } from '@/lib/utils';
 
 const props = defineProps<
@@ -24,7 +20,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
     v-bind="forwarded"
     :class="
       cn(
-        'border-input bg-background flex flex-wrap items-center gap-2 rounded-md border px-3 py-1.5 text-sm',
+        'flex flex-wrap items-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-1.5 text-sm dark:border-slate-800 dark:bg-slate-950',
         props.class,
       )
     "

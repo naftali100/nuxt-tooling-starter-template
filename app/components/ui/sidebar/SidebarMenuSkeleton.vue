@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, type HTMLAttributes } from 'vue';
+import type { HTMLAttributes } from 'vue';
+import { computed } from 'vue';
 import { cn } from '@/lib/utils';
 import { Skeleton } from '@/components/ui/skeleton';
 
@@ -15,7 +16,6 @@ const width = computed(() => {
 
 <template>
   <div
-    data-slot="sidebar-menu-skeleton"
     data-sidebar="menu-skeleton"
     :class="cn('flex h-8 items-center gap-2 rounded-md px-2', props.class)"
   >
@@ -26,7 +26,7 @@ const width = computed(() => {
     />
 
     <Skeleton
-      class="h-4 max-w-(--skeleton-width) flex-1"
+      class="h-4 max-w-[--skeleton-width] flex-1"
       data-sidebar="menu-skeleton-text"
       :style="{ '--skeleton-width': width }"
     />

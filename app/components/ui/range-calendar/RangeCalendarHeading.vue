@@ -1,11 +1,8 @@
 <script lang="ts" setup>
+import type { RangeCalendarHeadingProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
-import {
-  RangeCalendarHeading,
-  type RangeCalendarHeadingProps,
-  useForwardProps,
-} from 'reka-ui';
+import { RangeCalendarHeading, useForwardProps } from 'reka-ui';
 import { cn } from '@/lib/utils';
 
 const props = defineProps<
@@ -24,7 +21,6 @@ const forwardedProps = useForwardProps(delegatedProps);
 <template>
   <RangeCalendarHeading
     v-slot="{ headingValue }"
-    data-slot="range-calendar-heading"
     :class="cn('text-sm font-medium', props.class)"
     v-bind="forwardedProps"
   >

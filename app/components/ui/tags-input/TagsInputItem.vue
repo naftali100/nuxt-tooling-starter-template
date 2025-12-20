@@ -1,12 +1,9 @@
 <script setup lang="ts">
+import type { TagsInputItemProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
-import { reactiveOmit } from '@vueuse/core';
 
-import {
-  TagsInputItem,
-  type TagsInputItemProps,
-  useForwardProps,
-} from 'reka-ui';
+import { reactiveOmit } from '@vueuse/core';
+import { TagsInputItem, useForwardProps } from 'reka-ui';
 import { cn } from '@/lib/utils';
 
 const props = defineProps<
@@ -23,7 +20,7 @@ const forwardedProps = useForwardProps(delegatedProps);
     v-bind="forwardedProps"
     :class="
       cn(
-        'bg-secondary data-[state=active]:ring-ring ring-offset-background flex h-5 items-center rounded-md data-[state=active]:ring-2 data-[state=active]:ring-offset-2',
+        'flex h-5 items-center rounded-md bg-slate-100 ring-offset-white data-[state=active]:ring-2 data-[state=active]:ring-slate-950 data-[state=active]:ring-offset-2 dark:bg-slate-800 dark:ring-offset-slate-950 dark:data-[state=active]:ring-slate-300',
         props.class,
       )
     "

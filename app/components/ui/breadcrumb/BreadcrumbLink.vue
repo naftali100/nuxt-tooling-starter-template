@@ -1,6 +1,7 @@
 <script lang="ts" setup>
+import type { PrimitiveProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
-import { Primitive, type PrimitiveProps } from 'reka-ui';
+import { Primitive } from 'reka-ui';
 import { cn } from '@/lib/utils';
 
 const props = withDefaults(
@@ -13,10 +14,14 @@ const props = withDefaults(
 
 <template>
   <Primitive
-    data-slot="breadcrumb-link"
     :as="as"
     :as-child="asChild"
-    :class="cn('hover:text-foreground transition-colors', props.class)"
+    :class="
+      cn(
+        'transition-colors hover:text-slate-950 dark:hover:text-slate-50',
+        props.class,
+      )
+    "
   >
     <slot />
   </Primitive>

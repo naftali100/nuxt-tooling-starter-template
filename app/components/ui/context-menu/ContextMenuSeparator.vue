@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import type { ContextMenuSeparatorProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
-import { ContextMenuSeparator, type ContextMenuSeparatorProps } from 'reka-ui';
+import { ContextMenuSeparator } from 'reka-ui';
 import { cn } from '@/lib/utils';
 
 const props = defineProps<
@@ -13,8 +14,7 @@ const delegatedProps = reactiveOmit(props, 'class');
 
 <template>
   <ContextMenuSeparator
-    data-slot="context-menu-separator"
     v-bind="delegatedProps"
-    :class="cn('bg-border -mx-1 my-1 h-px', props.class)"
+    :class="cn('-mx-1 my-1 h-px bg-slate-200 dark:bg-slate-800', props.class)"
   />
 </template>

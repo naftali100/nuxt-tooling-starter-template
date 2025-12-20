@@ -1,35 +1,32 @@
 <script setup lang="ts">
+import type { MenubarSubTriggerProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
 import { ChevronRight } from 'lucide-vue-next';
-import {
-  MenubarSubTrigger,
-  type MenubarSubTriggerProps,
-  useForwardProps,
-} from 'reka-ui';
+import { MenubarSubTrigger, useForwardProps } from 'reka-ui';
 import { cn } from '@/lib/utils';
 
 const props = defineProps<
   MenubarSubTriggerProps & { class?: HTMLAttributes['class']; inset?: boolean }
 >();
 
-const delegatedProps = reactiveOmit(props, 'class', 'inset');
+const delegatedProps = reactiveOmit(props, 'class');
+
 const forwardedProps = useForwardProps(delegatedProps);
 </script>
 
 <template>
   <MenubarSubTrigger
-    data-slot="menubar-sub-trigger"
-    :data-inset="inset ? '' : undefined"
     v-bind="forwardedProps"
     :class="
       cn(
-        'focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground flex cursor-default items-center rounded-sm px-2 py-1.5 text-sm outline-none select-none data-[inset]:pl-8',
+        'flex cursor-default items-center rounded-sm px-2 py-1.5 text-sm outline-none select-none focus:bg-slate-100 focus:text-slate-900 data-[state=open]:bg-slate-100 data-[state=open]:text-slate-900 dark:focus:bg-slate-800 dark:focus:text-slate-50 dark:data-[state=open]:bg-slate-800 dark:data-[state=open]:text-slate-50',
+        inset && 'pl-8',
         props.class,
       )
     "
   >
     <slot />
-    <ChevronRight class="ml-auto size-4" />
+    <ChevronRight class="ml-auto h-4 w-4" />
   </MenubarSubTrigger>
 </template>

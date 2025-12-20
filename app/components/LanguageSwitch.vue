@@ -19,9 +19,11 @@ const availableLocales = computed(() => {
         v-for="locale_ in availableLocales"
         :key="locale_.code"
         class="cursor-pointer"
-        @click="$router.push(switchLocalePath(locale_.code))"
+        as-child
       >
-        {{ locale_.name }}
+        <NuxtLink :to="switchLocalePath(locale_.code)">
+          {{ locale_.name }}
+        </NuxtLink>
       </DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>

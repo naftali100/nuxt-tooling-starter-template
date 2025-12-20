@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import type { TabsContentProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
-import { TabsContent, type TabsContentProps } from 'reka-ui';
+import { TabsContent } from 'reka-ui';
 import { cn } from '@/lib/utils';
 
 const props = defineProps<
@@ -13,8 +14,12 @@ const delegatedProps = reactiveOmit(props, 'class');
 
 <template>
   <TabsContent
-    data-slot="tabs-content"
-    :class="cn('flex-1 outline-none', props.class)"
+    :class="
+      cn(
+        'mt-2 ring-offset-white focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 focus-visible:outline-none dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300',
+        props.class,
+      )
+    "
     v-bind="delegatedProps"
   >
     <slot />

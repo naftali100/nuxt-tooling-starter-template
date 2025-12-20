@@ -9,7 +9,6 @@ const props = defineProps<{
 
 <template>
   <div
-    data-slot="sidebar-content"
     data-sidebar="content"
     :class="
       cn(

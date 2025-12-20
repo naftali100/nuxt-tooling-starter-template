@@ -1,11 +1,8 @@
 <script lang="ts" setup>
+import type { CalendarGridRowProps } from 'reka-ui';
 import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
-import {
-  CalendarGridRow,
-  type CalendarGridRowProps,
-  useForwardProps,
-} from 'reka-ui';
+import { CalendarGridRow, useForwardProps } from 'reka-ui';
 import { cn } from '@/lib/utils';
 
 const props = defineProps<
@@ -18,11 +15,7 @@ const forwardedProps = useForwardProps(delegatedProps);
 </script>
 
 <template>
-  <CalendarGridRow
-    data-slot="calendar-grid-row"
-    :class="cn('flex', props.class)"
-    v-bind="forwardedProps"
-  >
+  <CalendarGridRow :class="cn('flex', props.class)" v-bind="forwardedProps">
     <slot />
   </CalendarGridRow>
 </template>
