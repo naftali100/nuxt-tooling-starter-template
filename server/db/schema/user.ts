@@ -1,4 +1,4 @@
-import { timestamp, pgTable, text, uuid, pgEnum } from 'drizzle-orm/pg-core';
+import { timestamp, pgTable, text, uuid } from 'drizzle-orm/pg-core';
 import {
   createInsertSchema,
   createSelectSchema,

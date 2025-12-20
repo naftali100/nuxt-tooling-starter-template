@@ -24,6 +24,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/image',
+    '@nuxt/hints',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxtjs/i18n',
@@ -110,6 +111,12 @@ export default defineNuxtConfig({
     strategy: 'prefix_and_default',
     defaultLocale: 'en',
     vueI18n: './i18n.config.ts',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root', // recommended
+      fallbackLocale: 'en',
+    },
     experimental: {
       localeDetector: './languageDetector.ts',
     },
