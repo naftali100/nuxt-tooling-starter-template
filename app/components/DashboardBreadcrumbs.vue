@@ -15,6 +15,8 @@ const {
   activeClasses = 'text-gray-400 hover:text-gray-500',
   homeElement = HomeIcon,
   capitalizeLinks = false,
+  className: _className = '',
+  separatorComponent = undefined,
 } = defineProps<{
   className?: string;
   separatorComponent?: Component;
@@ -26,10 +28,9 @@ const {
 
 const { localeCodes } = useI18n();
 
-const pathNames = ref();
-watchEffect(() => {
+const pathNames = computed(() => {
   const { path } = useRoute();
-  pathNames.value = path.split('/').filter((path) => path);
+  return path.split('/').filter((path) => path);
 });
 </script>
 
@@ -43,7 +44,7 @@ watchEffect(() => {
       </BreadcrumbItem>
       <BreadcrumbSeparator class="rtl:rotate-180" />
       <template v-for="(pathPart, index) in pathNames" :key="index">
-        <template v-if="!localeCodes.includes(pathPart)">
+        <template v-if="!localeCodes.includes(pathPart as any)">
           <BreadcrumbItem>
             <BreadcrumbPage
               v-if="
