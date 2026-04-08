@@ -1,22 +1,25 @@
 {
   "name": "nuxt-app",
-  "packageManager": "pnpm@10.12.1",
-  "type": "module",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "npm run typecheck && nuxt build",
+    "build": "pnpm run typecheck && nuxt build",
     "dev": "nuxt dev",
-    "format": "prettier --write --ignore-unknown .",
+    "format": "vp fmt",
     "generate": "nuxt generate",
     "lint": "eslint .",
+    "vp-lint": "vp lint",
     "lint:fix": "eslint . --fix",
     "postinstall": "nuxt prepare",
-    "prepare": "husky",
+    "prepare": "vp config",
     "preview": "nuxt preview",
     "typecheck": "nuxt typecheck",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:seed": "drizzle-kit seed"
+    "db:seed": "drizzle-kit seed",
+    "test": "vp test",
+    "test:coverage": "vp test --coverage",
+    "test:watch": "vp test --watch"
   },
   "dependencies": {
     "@clerk/backend": "^2.29.0",
@@ -77,9 +80,17 @@
     "prettier": "3.6.2",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.18",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vite-plus": "latest"
   },
-  "lint-staged": {
+  "packageManager": "pnpm@10.33.0",
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+      "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+    }
+  },
+  "old-lint-staged": {
     "**/*": [
       "npm run lint:fix",
       "prettier --write --ignore-unknown"
