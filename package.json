@@ -79,17 +79,16 @@
     "lint-staged": "^16.2.7",
     "prettier": "3.6.2",
     "prettier-plugin-tailwindcss": "^0.7.2",
+    "rolldown": "1.0.0-rc.14",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
     "vite-plus": "latest"
   },
-  "packageManager": "pnpm@10.33.0",
-  "pnpm": {
-    "overrides": {
-      "vite": "npm:@voidzero-dev/vite-plus-core@latest",
-      "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
-    }
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
   },
+  "packageManager": "pnpm@10.33.0",
   "old-lint-staged": {
     "**/*": [
       "npm run lint:fix",
