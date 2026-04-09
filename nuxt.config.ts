@@ -1,4 +1,4 @@
-import { shadcn } from '@clerk/themes';
+import { shadcn } from '@clerk/ui/themes';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -76,9 +76,9 @@ export default defineNuxtConfig({
     telemetry: {
       disabled: true,
     },
-    appearance: {
-      baseTheme: shadcn,
-    },
+    // appearance: {
+    //   baseTheme: shadcn,
+    // },
   },
   i18n: {
     locales: [

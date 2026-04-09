@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CheckIcon, CopyIcon, EyeIcon, EyeOffIcon } from 'lucide-vue-next';
+import { CheckIcon, CopyIcon, EyeIcon, EyeOffIcon } from '@lucide/vue';
 import { ref, computed } from 'vue';
 
 const { value = '' } = defineProps<{

@@ -8,7 +8,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
-import { HomeIcon } from 'lucide-vue-next';
+import { HomeIcon } from '@lucide/vue';
 
 const {
   listClasses = 'flex items-center gap-x-2 text-sm font-medium',

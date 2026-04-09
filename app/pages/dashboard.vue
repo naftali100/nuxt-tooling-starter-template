@@ -1,11 +1,5 @@
 <script setup lang="ts">
-definePageMeta({
-  middleware: ['auth'],
-  auth: {
-    navigateUnauthenticatedTo: '/sign-in',
-    guestRedirectUrl: '/sign-in',
-  },
-});
+definePageMeta({});
 </script>
 <template>
   <div>

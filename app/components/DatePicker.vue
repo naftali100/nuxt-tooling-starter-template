@@ -13,7 +13,7 @@ import {
   type DateValue,
   getLocalTimeZone,
 } from '@internationalized/date';
-import { Calendar as CalendarIcon } from 'lucide-vue-next';
+import { Calendar as CalendarIcon } from '@lucide/vue';
 
 const { locale } = useI18n();
 const df = computed(
