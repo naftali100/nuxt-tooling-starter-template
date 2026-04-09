@@ -1,14 +1,18 @@
 {
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "oxc.fmt.configPath": "./vite.config.ts",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
   "prettier.tabWidth": 2,
   "editor.indentSize": "tabSize",
   "editor.tabSize": 2,
   "editor.linkedEditing": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": "always"
+    "source.fixAll": "always",
+    "source.fixAll.oxc": "explicit"
   },
   "cSpell.words": ["Nuxt"],
-  "javascript.preferences.renameMatchingJsxTags": true,
-  "typescript.preferences.renameMatchingJsxTags": true,
+  "js/ts.preferences.renameMatchingJsxTags": true,
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
     ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
