@@ -1,6 +1,5 @@
 import { shadcn } from '@clerk/ui/themes';
 import tailwindcss from '@tailwindcss/vite';
-import checker from 'vite-plugin-checker';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -48,7 +47,7 @@ export default defineNuxtConfig({
         'style-src': ["'self'", "'unsafe-inline'"],
         'connect-src': [
           "'self'",
-          'https://daring-stinkbug-43.clerk.accounts.dev', // add your local server here
+          'https://eager-husky-3.clerk.accounts.dev', // add your local server here
         ],
         'worker-src': ["'self'", 'blob:'],
         'frame-src': ["'self'", 'https://challenges.cloudflare.com'],
@@ -156,11 +155,11 @@ export default defineNuxtConfig({
   // vite: {
   //   plugins: [tailwindcss()],
   // },
-  vite: {
-    plugins: [
-      checker({
-        vueTsc: true, // מפעיל בדיקת טיפוסים עבור קבצי Vue ו-TS
-      }),
-    ],
-  },
+  // vite: {
+  //   plugins: [
+  //     checker({
+  //       vueTsc: true,
+  //     }),
+  //   ],
+  // },
 });
