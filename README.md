@@ -42,6 +42,10 @@ NUXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your-publishable-key
 NUXT_CLERK_SECRET_KEY=your-secret-key
 ```
 
+3. configure protected paths in:
+   - `server/middleware/auth.ts`
+   - `app/middleware/auth.ts`
+
 ### Step 3: Update Configuration
 
 Replace placeholder values across the project. Search for `CHANGE_ME` and update them with your own values, such as your website's domain.

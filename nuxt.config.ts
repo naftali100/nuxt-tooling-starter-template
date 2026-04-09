@@ -1,4 +1,5 @@
 import { shadcn } from '@clerk/ui/themes';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -150,4 +151,8 @@ export default defineNuxtConfig({
       },
     },
   },
+  // css: ['./app/assets/css/tailwind.css'],
+  // vite: {
+  //   plugins: [tailwindcss()],
+  // },
 });
