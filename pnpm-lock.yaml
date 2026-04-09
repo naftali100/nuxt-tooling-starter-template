@@ -137,9 +137,6 @@ importers:
       vue-sonner:
         specifier: ^2.0.9
         version: 2.0.9(@nuxt/kit@4.4.2(magicast@0.5.2))(@nuxt/schema@4.4.2)(nuxt@4.4.2(@babel/core@7.29.0)(@babel/plugin-syntax-jsx@7.28.6(@babel/core@7.29.0))(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.6)(@types/node@25.5.2)(@vue/compiler-sfc@3.5.32)(bufferutil@4.1.0)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.2(@types/pg@8.20.0)(pg@8.20.0(pg-native@3.7.0))(postgres@3.4.9)))(drizzle-orm@0.45.2(@types/pg@8.20.0)(pg@8.20.0(pg-native@3.7.0))(postgres@3.4.9))(eslint@9.39.4(jiti@2.6.1))(ioredis@5.10.1)(lightningcss@1.32.0)(magicast@0.5.2)(optionator@0.9.4)(oxlint@1.58.0(oxlint-tsgolint@0.20.0))(rolldown@1.0.0-rc.14)(rollup-plugin-visualizer@7.0.1(rolldown@1.0.0-rc.14)(rollup@4.60.1))(rollup@4.60.1)(srvx@0.11.15)(terser@5.46.1)(tsx@4.21.0)(typescript@5.9.3)(utf-8-validate@6.0.6)(vite@7.3.2(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(vue-tsc@3.2.6(typescript@5.9.3))(yaml@2.8.3))
-      vue-tsc:
-        specifier: ^3.2.6
-        version: 3.2.6(typescript@5.9.3)
       winston:
         specifier: ^3.19.0
         version: 3.19.0
@@ -168,9 +165,15 @@ importers:
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
+      vite-plugin-checker:
+        specifier: ^0.12.0
+        version: 0.12.0(eslint@9.39.4(jiti@2.6.1))(optionator@0.9.4)(oxlint@1.58.0(oxlint-tsgolint@0.20.0))(typescript@5.9.3)(vite@7.3.2(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(vue-tsc@3.2.6(typescript@5.9.3))
       vite-plus:
         specifier: latest
         version: 0.1.16(@types/node@25.5.2)(bufferutil@4.1.0)(esbuild@0.27.7)(jiti@2.6.1)(terser@5.46.1)(tsx@4.21.0)(typescript@5.9.3)(utf-8-validate@6.0.6)(vite@7.3.2(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(yaml@2.8.3)
+      vue-tsc:
+        specifier: ^3.2.6
+        version: 3.2.6(typescript@5.9.3)
 
 packages:
 
