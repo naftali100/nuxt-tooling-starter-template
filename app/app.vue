@@ -47,12 +47,12 @@ watchEffect(() => {
     },
   });
 });
-defineOgImageComponent('Pergel', {
-  headline: '',
-  title: 'CHANGE_ME',
-  description: 'CHANGE_ME',
-  colorMode: colorMode.preference,
-});
+// defineOgImage('Pergel', {
+//   headline: '',
+//   title: 'CHANGE_ME',
+//   description: 'CHANGE_ME',
+//   colorMode: colorMode.preference,
+// });
 
 useSeoMeta({
   titleTemplate: null,
