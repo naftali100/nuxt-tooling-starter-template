@@ -63,7 +63,7 @@
     "vaul-vue": "^0.4.1",
     "vee-validate": "^4.15.1",
     "vue": "^3.5.32",
-    "vue-router": "latest",
+    "vue-router": "5.0.4",
     "vue-sonner": "^2.0.9",
     "winston": "^3.19.0",
     "winston-daily-rotate-file": "^5.0.0",
@@ -76,7 +76,6 @@
     "rolldown": "1.0.0-rc.14",
     "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3",
-    "vite-plugin-checker": "^0.12.0",
     "vite-plus": "latest",
     "vue-tsc": "^3.2.6"
   },
